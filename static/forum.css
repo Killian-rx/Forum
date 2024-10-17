@@ -1,0 +1,389 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: whitesmoke;
+}
+
+.navbar{
+    width: 100%;    
+    margin: auto;
+    height: 8vh;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    padding: 10px 20px 10px 20px;
+    background-color: rgba(0, 0, 0, 1);
+}
+
+
+.navlinks{
+    color: white;
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navlinks a{
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+.navlinks i{
+    font-size: 25px;
+    color: white;
+}
+
+.navlinks a:hover{
+    color: rgb(41, 195, 46);
+}
+
+.navlinks a:active{
+    cursor: pointer;
+    transform: scale(0.8);
+}
+
+.navlinks h1{
+    width: 10vw;
+    display: flex;
+    justify-content: center;
+}
+
+#profilcontainer{
+    display: none;
+    overflow: hidden;
+    position: absolute;
+    margin: auto;
+    color: gray;
+    width: 10vw;
+    left: 85vw;
+    top: 9vh;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); 
+    background: white;
+    border-radius: 10px;
+}
+
+.profil{
+    width: 10vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.profil_op{
+    width: 100%;
+    padding: 1vh 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.profil_op img{
+    width: 1.5vw;
+}
+
+.profil_op:hover{
+    background: whitesmoke;
+    cursor: pointer;
+}
+
+.profil button{
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 25px;
+    color: white;
+}
+
+.profil button:hover{
+    color: rgb(41, 195, 46);
+}
+
+.profil button:active{
+    cursor: pointer;
+    transform: scale(0.98);
+}
+
+#profilpage{
+    color: gray;
+    position: absolute;
+    width: 70vw;
+    left: 15vw;
+    top: 13vh;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); 
+    background: white;
+    height: 80vh;
+    margin: auto;
+    text-align: center;
+    align-items: center;
+    display: none;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+#profilpage button{
+    width: 7vw;
+    font-size: 20px;
+    background: none;
+    outline: none;
+    border: none;
+}
+
+.headprofil{
+    width: 90%;
+    align-items: center;
+    margin: auto;
+    height: 8vh;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-between;
+}
+
+.infop{
+    width: 90%;
+    align-items: center;
+    margin: auto;
+    height: auto;
+    display: flex;
+    margin-top: 3vh;
+}
+
+.infopp{
+    margin-bottom: 10vh;
+    text-align: left;
+}
+
+.infop img{
+    width: 20%;
+    margin-right: 10vw;
+}
+
+.bigcontainer{
+    position: relative;
+    width: 98vw;
+    height: 92vh;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.part1{
+    width: 20%;
+    height: 100%;
+    background: whitesmoke;
+    margin-right: 1vw;
+}
+
+.part2{
+    width: 60%;
+    height: 100%;
+}   
+
+
+.post_button button{
+    position: absolute;
+    top: 90%;
+    left: 74%;
+    border: none;
+    outline: none;
+    background: rgb(41, 195, 46);
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 30px;
+    color: white;
+
+}
+
+.post_button button:active{
+    cursor: pointer;
+    transform: scale(0.98);
+}
+
+
+.part3{
+    width: 20%;
+    height: 100%;
+    background: whitesmoke;
+    margin-left: 1vw;
+}
+
+#container {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    overflow: auto;
+    scroll-behavior: smooth;    
+}
+
+#container::-webkit-scrollbar {
+    width: 0;
+}
+
+#container::-webkit-scrollbar-thumb {
+    background: transparent
+}
+
+.Message {
+    color: black;
+    background-color: white;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 1vh;
+    border-radius: 4px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+
+
+.profilphoto{
+    width: 10%;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1.5vw;
+}
+
+.profilphoto img{
+    width: 100%;
+    height: 100%;
+}
+
+.headmess{
+    display: flex;
+    width: 90%;
+    align-items: center;
+    padding: 3vh 1.5vw;
+}
+
+.headmess i{
+    font-size: 60px;
+}
+
+.info{
+    width: fit-content;
+}
+
+.infoplus{
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    color: gray;
+    font-size: 14px;
+}
+
+.infoplus i{
+    font-size: 8px;
+    margin-right: 0.5vw;
+    margin-left: 0.5vw;
+}
+
+.hour{
+    color: black;
+}
+
+.texte{
+    width: 90%;
+    padding: 1vh 2vw;
+    margin-bottom: 1vh;
+}
+
+#like{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 7vw;
+    padding: 1vh 2vw;
+}
+
+#like i{
+    font-size: 20px;
+}
+
+#forum{
+    color: gray;
+    position: absolute;
+    width: 70vw;
+    left: 15vw;
+    top: 29vh;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); 
+    background: white;
+    height: 50vh;
+    margin: auto;
+    text-align: center;
+    align-items: center;
+    display: none;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.headpost{
+    width: 90%;
+    align-items: center;
+    margin: auto;
+    height: 8vh;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-between;
+}
+
+#forum input {
+    width: 90%;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    outline: none;
+    padding: 0.5vh 1vw 20vh 1vw;
+    margin-top: 9vh;
+    word-wrap: break-word; /* Pour la compatibilité avec les anciens navigateurs */
+    overflow-wrap: break-word; /* Pour les navigateurs modernes */
+}
+
+
+
+
+#forum input::placeholder {
+    color: gray;
+    font-size: 15px;
+}
+
+#forum button{
+    width: 7vw;
+    font-size: 20px;
+    background: none;
+    outline: none;
+    border: none;
+}
+
+#forum button:active{
+    cursor: pointer;
+    transform: scale(0.98);
+}
+
+
+#options{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: auto;
+    border-top: 1px solid rgba(0, 0, 0, 0.5);
+    padding: 1.5vh 5vw 1.5vh 5vw;
+}
+
+#options button{
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 15px;
+    color: black;
+}
+

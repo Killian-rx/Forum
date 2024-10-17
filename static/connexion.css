@@ -1,0 +1,226 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: url('img2.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.logpage{
+    width: 20%;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: transparent;
+    backdrop-filter: blur(40px);
+    border: 2px solid rgba(255, 255, 255, .2);
+    color: white;
+    padding: 30px 40px;
+    border-radius: 10px;
+}
+
+.error-message{
+    color:tomato;
+    margin: 0;
+    margin-bottom: 2vh;
+}
+
+.input-box{
+    position: relative;
+    margin-bottom: 2vh;
+    width: 100%;
+    height: 5vh;
+    margin: 30px 0;
+}
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: white;
+    padding: 1vh 3.5vw 1vh 1vw;
+}
+
+.input-box input::placeholder{
+    color: white;
+}
+
+.input-box i{
+    position: absolute;
+    right: 1vw;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+#cadenas{
+    position: absolute;
+    right: 2vw;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+#login{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+#login h2{
+    margin: 0;
+    margin-bottom: 2vh;
+}
+
+#register{
+    width: 100%;
+    margin: auto;
+    display: none;
+    text-align: center;
+}
+
+#register h2{
+    margin: 0;
+    margin-bottom: 2vh;
+}
+
+#register select{
+    width: 100%;
+    height: 5vh;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: white;
+    padding: 1vh 3.5vw 1vh 1vw;
+}
+
+#register select option{
+    background: white;
+    color: black;
+}
+
+.btn{
+    width: 100%;
+    height: 5vh;
+    border: none;
+    outline: none;
+    background: white;
+    color: black;
+    font-size: 16px;
+    border-radius: 40px;
+    font-weight: 600;
+    margin-top: 2vh;
+}
+
+.btn:active{
+    cursor: pointer;
+    transform: scale(0.98);
+}
+
+.avatar{
+    display: flex;
+    justify-content: center;
+    margin-top: 2vh;
+    align-items: center;
+}
+
+.avatar button{
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 40px;
+    color: white;
+    margin-right: 1vw;
+}
+
+.avatar button:hover{
+    cursor: pointer;
+    color: green;
+}
+
+#chooseavatar{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 18vw;
+    height:auto;
+    transform: translate(-50%, -50%);
+    background: white;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 10px;
+    align-items: center;
+    justify-content:center;
+    flex-wrap: wrap;
+    padding: 1vh 1vw;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#chooseavatar img{
+    width: 100%;
+    height: 100%
+}
+
+#chooseavatar button{
+    border: none;
+    width: 5vw;
+    padding-top: 0.5vh;
+    outline: none;
+    background: transparent;
+}
+
+#chooseavatar button:hover{
+    cursor: pointer;
+    transform: scale(0.95);
+}
+
+#chooseavatar h3{
+    width: 100%;
+    text-align: center;
+    color: black;
+    font-size: 16px;
+}
+
+.choice{
+    justify-content: center;
+    color: white;
+    font-size: 14px;
+    margin-top: 3vh;
+    text-align: center;
+}
+
+.choice button{
+    border: none;
+    outline: none;
+    background: transparent;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.choice button:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.choice button:active{
+    cursor: pointer;
+    transform: scale(0.90);
+}

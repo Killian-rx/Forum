@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/forum.css">
+    <title>Foromus</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navlinks">
+            <h1>Foromus</h1>
+            {{ if .Name }}
+                <p>Vous êtes connecté en tant que, {{ .Name }}</p>
+                <div class="profil">
+                    <button onclick="Profil()" class='bx bxs-user-circle'></button>
+                </div>
+            {{ else }}
+                <p>Vous n'êtes pas connecté</p>
+                <div class="profil">
+                    <button onclick="Profil()" class='bx bxs-user-circle'></button>
+                </div>
+            {{ end }}
+        </div>
+    </nav>
+
+    <div class="bigcontainer" id="bigcontainer">
+        <div class="part1">
+        </div>
+        <div class="part2">
+            <div id="container">
+                <div id="messages">
+                    {{ range .Messages }}
+                        <div class="Message">
+                            <div class="headmess">
+                                <div class="profilphoto"><img src="{{ .ProfilePhoto }}"></div>
+                                <div class="info">
+                                    <p>{{ if eq .Username $.Name }}Vous{{ else }}@{{ .Username }}{{ end }}</p>
+                                    <div class="infoplus">
+                                        <p>{{ .Country }}</p>
+                                        <i class='bx bxs-circle'></i>
+                                        <p class="hour">{{ .TimeAgo }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="texte">
+                                <p>{{ .Message }}</p>
+                            </div>
+                            <div id="like">
+                                {{ if .Liked }}
+                                    <i class='bx bxs-heart' style='color:#fd0e08' ></i>
+                                {{ else }}
+                                    <i class='bx bx-heart'></i>
+                                {{ end }}
+                                <p>{{ .LikesCount }}</p>
+                            </div>
+                            <form id="options" action="/updatelike" method="get">
+                                <input type="hidden" name="username" value="{{.Username}}">
+                                <input type="hidden" name="messageID" value="{{.ID}}">
+                                <button type="submit" onclick="LikedMessage()">J'aime</button>
+                                <button type="button">Commentez</button>
+                                <button type="button">Partagez</button>
+                            </form>
+                        </div>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+        <div class="part3">
+        </div>
+    </div>
+
+    <div class="post_button">
+        <button onclick="PostMessage()" class='bx bx-pencil'></button>
+    </div>
+
+    <div id="profilcontainer">
+            {{ if .Name }}
+                <div class="profil">
+                    <div class="profil_op" onclick="logout()">
+                        <p>Log Out</p>
+                        <i class='bx bx-log-out'></i>
+                    </div>
+                    <div class="profil_op" onclick="ProfilPage()">
+                        <p>Profil</p>
+                        <img src="{{ .Photo }}">
+                    </div>
+                </div>
+            {{ else }}
+                <div class="profil">
+                    <div class="profil_op" onclick="logout()">
+                        <p>Log In</p> 
+                        <i class='bx bx-log-in'></i>
+                    </div>
+                </div>
+            {{ end }}
+        </div>
+    </div>
+
+    <div id="profilpage">
+        <div class="headprofil">
+            <button onclick="Return()" class='bx bx-chevron-left'></button>
+            <h3>Profil</h3>
+            <button></button>
+        </div>
+        <div class="infop">
+            <img src="{{ .Photo }}">
+            <div class="infopp">
+                <h1>{{ .Name }}</h1>
+                <p>@{{ .Name }} - User</p>
+            </div>
+        </div>
+    </div>
+    
+    <form id="forum" action="/postmessage" method="post">
+        <div class="headpost">
+            <button onclick="Return()" class='bx bx-chevron-left'></button>
+            <h3>Poster un message</h3>
+            <button type="submit">Publier</button>
+        </div>
+        <input type="text" name="user_message" placeholder="message" required>
+    </form>
+    <script src="static/main.js"></script>
+</body>
+</html>
